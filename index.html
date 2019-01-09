@@ -4,15 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Saas Clothings</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
+        <div id="top_bar_mobile" class="top_bar_mobile hide">
+            <img src="./images/mobile_logo.png" alt="" class="mobile_logo">
+            <div id="menu_icon" class="menu_icon">MENU <i class="fa fa-bars fa-2x"></i></div>
+        </div>
+
+<!-- Mobile Menu Panel -->
+        <div id="mobileMenu" class="mobileMenu hide">
+            <div class="menu_top">
+                <div class="log_top">Login</div>
+                <div class="signup_top">Get Started</div>
+                <div id="close" class="fa fa-close fa-3x">X</div>        
+            </div>
+            <div class="menu_main">
+                <p>Overviews</p>
+                <p>Features</p>
+                <p>Pricing</p>
+                <p>About Us</p>
+                <p>FAQs</p>        
+            </div>
+        </div>
+<!-- Mobile Menu Panel -->
+
         <div class="top_bar">
-            <img src="./images/main_logo.png" alt="">
+            <img src="./images/main_logo.png" alt="" class="main_logo">
             <div class="nav_menu">
                 <p>Overviews</p>
                 <p>Features</p>
@@ -25,16 +47,17 @@
                 <div class="signup">Get Started</div>
             </div>
         </div>
-
-        <div class="intro">
-            <h1>Finally, something that works!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.</p>
-            <div class="email_input">
-                <input type="email" class="user_mail" name="user_mail" placeholder="Enter your email ID">
-                <div class="btn"><button>Start for free</button></div>
-            </div>
-        </div>
     </header>
+
+    <div class="intro">
+        <h1>Finally, something that works!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut eget imperdiet neque. In volutpat ante semper diam molestie, et aliquam erat laoreet.</p>
+        <div class="email_input">
+            <input type="email" class="user_mail" name="user_mail" placeholder="Enter your email ID">
+            <div class="btn"><button>Start for free</button></div>
+        </div>
+    </div>
 
     <div class="main_content">
         <div class="dashboard">
@@ -121,7 +144,7 @@
     </div>
     <footer>
         <div class="footer_contents">
-            <div class="product">
+            <div class="product ft">
                 PRODUCT
                 <div class="members">
                     <p>Features</p>
@@ -129,7 +152,7 @@
                     <p>Pricing</p>
                 </div>
             </div>
-            <div class="use_cases">
+            <div class="use_cases ft">
                 USE CASES
                 <div class="members">
                     <p>ITES</p>
@@ -137,7 +160,7 @@
                     <p>Services Sector</p>
                 </div>
             </div>
-            <div class="support">
+            <div class="support ft">
                 SUPPORT
                 <div class="members">
                     <p>Blog</p>
@@ -145,7 +168,7 @@
                     <p>Support</p>
                 </div>
             </div>
-            <div class="company">
+            <div class="company ft">
                 COMPANY
                 <div class="members">
                     <p>About</p>
@@ -153,7 +176,7 @@
                     <p>Terms of Service</p>
                 </div>
             </div>
-            <div class="features">
+            <div class="features ft">
                 FEATURES1
                 <div class="members">
                     <p>Link #1</p>
@@ -161,7 +184,7 @@
                     <p>Link #3</p>
                 </div>
             </div>
-            <div class="features">
+            <div class="features ft">
                 FEATURES2
                 <div class="members">
                     <p>Link #1</p>
@@ -169,7 +192,7 @@
                     <p>Link #3</p>
                 </div>
             </div>
-            <div class="social_media">
+            <div class="social_media ft">
                 <img src="./images/main_logo.png" alt="">
                 <div class="socials">
                     <span><img src="./images/facebook.png" alt=""></span>
@@ -180,5 +203,23 @@
         </div>
         <div class="endnote">Copyright &copy; 2018, ElitePIxels Inc. Designed for Project365.design</div>
     </footer>
+
+    <script type="text/javascript">
+
+        let topBar = document.getElementById('top_bar_mobile');
+        let menuIcon = document.getElementById('menu_icon');
+        let mobileMenu = document.getElementById('mobileMenu');
+        let closeBar = document.getElementById('close');
+
+        menuIcon.addEventListener('click', function () {
+            topBar.style.display = 'none';
+            mobileMenu.classList.remove('hide');
+        });
+
+        closeBar.addEventListener('click', function () {
+            topBar.style.display = 'flex';
+            mobileMenu.classList.add('hide');
+        });
+    </script>
 </body>
 </html>

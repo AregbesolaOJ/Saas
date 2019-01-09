@@ -26,12 +26,14 @@ html {
 .clearfix {
   zoom: 1;
 }
+.hide {
+  display: none;
+}
 /****************************************
           MAIN CONTENT STYLING
 *****************************************/
   body {
     margin: 0;
-
   }
   header {
 
@@ -280,9 +282,9 @@ html {
   .user_email {
     background-color: #ffffff;
     mix-blend-mode: normal;
-    opacity: 0.2;
+    opacity: 0.5;
     border: 1px solid #0074e4;
-    border-radius: 4px;
+    border-radius: 4px 0 0 4px;
     font-weight: normal;
     line-height: normal;
     font-size: 14px;
@@ -335,17 +337,372 @@ html {
     color: #71828A;
   }
 
+
 /****************************************
           MEDIA QUERIES
 *****************************************/
-
-
-/* For Large Screen Sizes */
-
-@media (min-width: 1024px) {
-
-}
-
-@media (min-width: 1440px) {
+/* For Smaller Screen Sizes */
+@media (max-width: 378px) {
+  .top_bar_mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    background-color: rgba(5, 0, 0, 0.9);
+  }
+  .top_bar {
+    display: none;
+  }
+  .nav_menu,
+  .login_signup,
+  .main_logo {
+    display: none;
+  }
+  .mobile_logo {
+    margin: 10px 0;
+    border: 1px solid rgba(5, 0, 0, 0.9);
+    border-radius: 5px;
+    display: block;
+  }
+  .menu_icon {
+    color: rgba(223, 190, 138, 0.9);
+    margin: 20px 20px 0 0;
+    display: block;
+  }
+  .mobileMenu {
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(223, 190, 138, 0.9);
+    color: rgba(95, 0, 0, 0.9);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
+  }
+  .menu_top {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 5px 20px;
+    padding: 5px;
+  }
+  .log_top {
+    font-weight: 500;
+    line-height: normal;
+    font-size: 15px;
+    margin-right: 10px;
+    padding: 10px 5px 0;
+  }
+  .signup_top {
+    font-weight: 500;
+    line-height: normal;
+    font-size: 15px;
+    text-align: center;
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #0074E4;
+    border-radius: 5px;
+    margin-right: auto;
+  }
+  .menu_main {
+    padding: 50px;
+  }
+  .menu_main p {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 30px 0;
+    border-bottom: 1px solid #0074e4;
+  }
+  .menu_main p:active {
+    color: #ffffff;
+    background-color: #0074E4;
+    border-radius: 4px;
+  }
+  .intro {
+    margin: 100px 0 0;
+    padding: 10px;
+    text-align: center;
+    }
+  .intro h1 {
+    font-weight: 600;
+    line-height: normal;
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #1D262C;
+  }
+  .intro p {
+    font-weight: normal;
+    line-height: 1.9;
+    font-size: 12px;
+    color: #71828A;
+    text-align: center;
+    padding: 10px 25px;
+  }
+  .email_input {
+    display: block;
+    justify-content: center;
+    margin: 30px 0;
+  }
+  .user_mail {
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    opacity: 0.9;
+    border: 1px solid #71828A;
+    border-radius: 5px;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 10px;
+    color: #7f7f7f;
+    margin-bottom: 10px;
+    padding: 10px 100px 10px 10px;
+  }
+  .btn button {
+    font-weight: 600;
+    line-height: normal;
+    font-size: 10px;
+    color: #FFFFFF;
+    padding: 10px 85px;
+    border: 1px solid #0074e4;
+    text-align: center;
+    background: #0074E4;
+    border-radius: 5px;
+  }
+  .main_content {
+    background: 
+               linear-gradient(180deg, #F9F9F9 0%, #FFFFFF 100%);
+  }
+  .dashboard {
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+  }
+  .main_image {
+    display: none;
+  }
+  .info {
+    margin: 10px 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .note {
+    font-weight: normal;
+    line-height: 26px;
+    color: #71828A;
+    font-size: 10px;
+    padding: 5px;
+    margin: 10px;
+  }
+  .note h2 {
+    font-weight: 600;
+    line-height: normal;
+    font-size: 16px;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .note:hover {
+    font-weight: bolder;
+    color: #1D262C;
+    background-color: #FFFFFF;
+    box-shadow: 0px 10px 40px rgba(113, 130, 138, 0.2);
+  }
+  .secondary_title,
+  .tertiary_title {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  .secondary_title img,
+  .tertiary_title img {
+    width: 300px;
+    height: 260px;
+  }
+  .secondary_chart,
+  .tertiary_chart {
+    order: -1;
+    padding: 10px;
+    margin: 1px 0 30px;
+  }
+  .secondary_chart h2,
+  .tertiary_chart h2 {
+    font-weight: 600;
+    line-height: normal;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: underline;
+    color: #1D262c;
+    margin: 5px 0 20px;
+  }
+  .secondary_chart p,
+  .tertiary_chart p {
+    font-weight: normal;
+    line-height: 26px;
+    font-size: 10px;
+    color: #71828A;
+    margin: 0;
+  }
+  ul li {
+    font-weight: bold;
+    line-height: normal;
+    font-size: 10px;
+    margin: 30px 0;
+    color: #1D262C;
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+  .link {
+    font-weight: 500;
+    line-height: normal;
+    font-size: 11px;
+    color: #0074E4;
+    text-decoration: underline;
+  }
+  .final_title {
+    padding: 20px 10px;
+    background: 
+                linear-gradient(180deg, #F9F9F9 0%, #FFFFFF 100%);
+  }
+  .final_intro h2 {
+    font-weight: 600;
+    line-height: normal;
+    font-size: 20px;
+    text-decoration: underline;
+    text-align: center;
+    color: #1D262C;
+    margin: 0;
+  }
+  .final_intro p {
+    font-weight: normal;
+    line-height: 26px;
+    font-size: 12px;
+    text-align: left;
+    color: #71828a;
+    margin: 20px 0 0;
+    padding: 5px 20px;
+  }
+  .final_chart {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    justify-content: flex-start;
+  }
+  .item {
+    text-align: center;
+    padding: 20px;
+    margin: 10px 0;
+  }
+  .item h3 {
+    font-weight: bold;
+    line-height: normal;
+    font-size: 16px;
+    color: #1D262C;
+    margin: 10px 0;
+  }
+  .item p {
+    font-weight: bold;
+    line-height: 24px;
+    font-size: 10px;
+    color: #71828A;
+  }
+  .feedbacks {
+    color: #ffffff;
+    padding: 20px;
+    display: block;
+    background: 
+              linear-gradient(90deg, #0074E4 0%, #0774DD 100%);
+  }
+  .reg h2 {
+    font-weight: 600;
+    line-height: normal;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+  }
+  .reg p {
+    font-weight: normal;
+    line-height: 22px;
+    font-size: 12px;
+    margin: 10px 0 30px;
+    text-align: center;
+    color: #FEFEFE;
+  }
+  .input {
+    display: block;
+    text-align: center;
+  }
+  .user_email {
+    background-color: #ffffff;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    border: 1px solid #0074e4;
+    border-radius: 5px;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 12px;
+    color: #000000;
+    margin: 10px 0;
+    padding: 10px 85px 10px 15px;
+  }
+  .btn_footer button {
+    margin: 1px;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 14px;
+    color: #0174e2;
+    padding: 10px 81px;
+    border: 1px solid #0074e4;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 5px;
+  }
+  footer {
+    margin: 0;
+  }
+  .footer_contents {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 12px;
+    text-align: center;
+    letter-spacing: 1.9px;
+    color:  #71828A;;
+    padding: 20px 0;
+  }
+  .members p {
+    display: none;
+    font-weight: normal;
+    line-height: 22px;
+    font-size: 14px;
+    margin: 20px 0;
+    color: #71828A;
+  }
+  .ft {
+    margin: 10px 0;
+  }
+  .social_media {
+    padding-top: 0;
+  }
+  .socials img {
+    margin: 0 10px;
+  }
+  .endnote {
+    text-align: center;
+    font-weight: 500;
+    line-height: normal;
+    font-size: 10px;
+    color: #71828A;
+  }
 
 }
